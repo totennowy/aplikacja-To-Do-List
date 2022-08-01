@@ -1,0 +1,64 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  padding: 1rem;
+  overflow-y: scroll;
+
+  &__single {
+    display: flex;
+    align-items: center;
+    border-radius: 5rem;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    background-color: $color-black-transparent;
+    transition: 0.2s;
+    box-shadow: 0.4rem 0.4rem $color-black;
+
+    &--text {
+      color: $color-white;
+      background: transparent;
+      flex: 1;
+      padding: 0.5rem;
+      border: none;
+      font-size: 2.5rem;
+
+      &-erased {
+        text-decoration: line-through;
+      }
+
+      &-edit {
+        background: $color-golden;
+        border-radius: 5rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+
+  &__box {
+    margin: 1rem;
+
+    &-img {
+      font-size: 2.5rem;
+      color: $color-white;
+      transition: 0.2s all;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-golden;
+      }
+    }
+  }
+}
+
+#element::-webkit-scrollbar {
+  display: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,28 @@
+@import "./resets";
+@import "./variables";
+@import "../components/form/inputfield";
+@import "../components/list/todolist";
+
+.app {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(assets/101cae7c7144a813f85bbb5d10ee86c6.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 1rem;
+    margin: 3rem 0;
+    color: $color-white;
+    z-index: 1;
+    text-align: center;
+  }
+}

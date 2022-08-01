@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 10px;
+  font-family: 'Mouse Memoirs', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 90%;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5rem;
+  -webkit-box-shadow: 0.4rem 0.4rem #000000ad;
+          box-shadow: 0.4rem 0.4rem #000000ad;
 }
 
-.App-link {
-  color: #61dafb;
+.input__box {
+  width: 100%;
+  border-radius: 5rem;
+  padding: 2rem 3rem;
+  font-size: 2.5rem;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: inset 0 0 0.5rem #000000ad;
+          box-shadow: inset 0 0 0.5rem #000000ad;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input__box:focus {
+  -webkit-box-shadow: 0 0 1rem 100rem #0000008c;
+          box-shadow: 0 0 1rem 100rem #0000008c;
+  outline: none;
+}
+
+.input__submit {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  margin: 1.2rem;
+  border-radius: 5rem;
+  right: 0rem;
+  border: 0.2rem solid #f0b52d;
+  font-size: 1.5rem;
+  background-color: #f0b52d;
+  color: #ffffff;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  -webkit-box-shadow: 0 0 1rem #000000ad;
+          box-shadow: 0 0 1rem #000000ad;
+  cursor: pointer;
+}
+
+.input__submit:hover {
+  background-color: #ffffff;
+  color: #f0b52d;
+}
+
+.todos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 85%;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.todos__single {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5rem;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  background-color: #0000008c;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0.4rem 0.4rem #000000ad;
+          box-shadow: 0.4rem 0.4rem #000000ad;
+}
+
+.todos__single--text {
+  color: #ffffff;
+  background: transparent;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5rem;
+  border: none;
+  font-size: 2.5rem;
+}
+
+.todos__single--text-erased {
+  text-decoration: line-through;
+}
+
+.todos__single--text-edit {
+  background: #f0b52d;
+  border-radius: 5rem;
+  padding: 1rem;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icons__box {
+  margin: 1rem;
+}
+
+.icons__box-img {
+  font-size: 2.5rem;
+  color: #ffffff;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+.icons__box-img:hover {
+  color: #f0b52d;
+}
+
+#element::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(assets/101cae7c7144a813f85bbb5d10ee86c6.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.app__title {
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  margin: 3rem 0;
+  color: #ffffff;
+  z-index: 1;
+  text-align: center;
 }
